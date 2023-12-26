@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.alibaba.com/schema/stat http://www.alibaba.com/schema/stat.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd  http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx.xsd">
+<!--    Spring配置文件:主要配置和业务逻辑有关的，比如数据源，事务控制等-->
+<!--    扫描除了Controller之外的-->
+    <context:component-scan base-package="com">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+<!--    引入外部jdbc.properties文件-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+<!--    配置数据源对象 DataSource-->
+    <bean class="com.alibaba.druid.pool.DruidDataSource" id="dataSource">
+        <property name="username" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+    </bean>
+
+<!--    配置mybatis和spring整合-->
+<!--    先引入mybatis整合到spring的适配包-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+<!--        指定mybatis全局配置文件-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+<!--        指定数据源-->
+        <property name="dataSource" ref="dataSource"/>
+<!--        指定mybatis的mapper文件的位置
+            在开发中通常将mapper.xml放在类路径下 resource/mapper-->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+<!--    将mybatis接口的实现加入到ioc容器-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<!--        这里是Mapper接口 dao-->
+        <property name="basePackage" value="com.dao"/>
+    </bean>
+
+<!--    配置事务管理器-->
+    <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="dataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+<!--    配置启动基于注解的声明式事务管理功能-->
+    <tx:annotation-driven transaction-manager="dataSourceTransactionManager"></tx:annotation-driven>
+
+<!--开启基于注解的事务，方式二-->
+<!--    <aop:config>-->
+<!--&lt;!&ndash;        切入点表达式&ndash;&gt;-->
+<!--        <aop:pointcut id="txPoint" expression="execution(* com.service.*(..))"/>-->
+<!--        &lt;!&ndash; 配置事务增强: 使用 txAdvice 指定规则对 txPoint 进行切入&ndash;&gt;-->
+<!--        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint"/>-->
+<!--    </aop:config>-->
+<!--    &lt;!&ndash; 配置事务增强，也就是指定事务如何切入&ndash;&gt;-->
+<!--    <tx:advice id="txAdvice">-->
+<!--        <tx:attributes>-->
+<!--            &lt;!&ndash; *代表所有方法都是事务方法&ndash;&gt;-->
+<!--            <tx:method name="*"/>-->
+<!--            &lt;!&ndash; 以 get 开始的所有方法 ，我们认为是只读，进行调优&ndash;&gt;-->
+<!--            <tx:method name="get*" read-only="true"/>-->
+<!--           </tx:attributes> </tx:advice>-->
+
+
+</beans>
