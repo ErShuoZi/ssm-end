@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class FurnServiceTest {
     private ApplicationContext ioc;
@@ -28,4 +29,38 @@ public class FurnServiceTest {
         furnService.save(furn);
         System.out.println("save ok ~");
     }
+
+    @Test
+    public void findAll() {
+        List<Furn> all = furnService.findAll();
+        for (Furn furn : all) {
+            System.out.println(furn);
+        }
+    }
+
+    @Test
+    public void update() {
+        Furn furn = new Furn();
+        furn.setId(30);
+        furn.setName("hahah");
+        furn.setMaker("大象");
+        furn.setImgPath(null);
+        furnService.update(furn);
+        System.out.println("修改成功");
+    }
+
+    @Test
+    public void delete() {
+        furnService.delete(1);
+        System.out.println("删除成功");
+    }
+
+
+    @Test
+    public void findByCondition() {
+        List<Furn> furns = furnService.findByCondition("灯");
+        System.out.println(furns);
+
+    }
+
 }

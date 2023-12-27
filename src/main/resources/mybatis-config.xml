@@ -9,5 +9,13 @@
     <typeAliases>
         <package name="com.bean"/>
     </typeAliases>
-
+<!--    配置分页拦截器-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+<!--            配置分页合理化-->
+<!--            如果请求的分页页数大于总页数，则返回最后一页-->
+<!--            如果请求分页页数小于1，则返回第一页-->
+            <property name="reason" value="true"/>
+        </plugin>
+    </plugins>
 </configuration>

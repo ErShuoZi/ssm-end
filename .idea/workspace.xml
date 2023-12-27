@@ -9,30 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d25710b-296a-46ba-8010-82be87ebac40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mbg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bean/Msg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/FurnController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/FurnService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/impl/FurnServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/springDispatcherServlet-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/FurnMapperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/MBGTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/T1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/FurnServiceTest.java" afterDir="false" />
+    <list default="true" id="8d25710b-296a-46ba-8010-82be87ebac40" name="Changes" comment="save接口实现">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/FurnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/FurnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/FurnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/FurnService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/impl/FurnServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/impl/FurnServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/springDispatcherServlet-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/springDispatcherServlet-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/FurnServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/FurnServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,55 +79,7 @@
   }
 }]]></component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.97">
-    <configuration name="FurnMapperTest.deleteByPrimaryKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.FurnMapperTest" />
-      <option name="METHOD_NAME" value="deleteByPrimaryKey" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FurnMapperTest.updateByPrimaryKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.FurnMapperTest" />
-      <option name="METHOD_NAME" value="updateByPrimaryKey" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FurnMapperTest.updateByPrimaryKeySelective" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com" />
-      <option name="MAIN_CLASS_NAME" value="com.FurnMapperTest" />
-      <option name="METHOD_NAME" value="updateByPrimaryKeySelective" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FurnServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FurnServiceTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssm" />
       <extension name="coverage">
         <pattern>
@@ -152,7 +89,40 @@
       </extension>
       <option name="PACKAGE_NAME" value="service" />
       <option name="MAIN_CLASS_NAME" value="service.FurnServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurnServiceTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.FurnServiceTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurnServiceTest.findByCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.FurnServiceTest" />
+      <option name="METHOD_NAME" value="findByCondition" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,6 +138,22 @@
       <option name="PACKAGE_NAME" value="service" />
       <option name="MAIN_CLASS_NAME" value="service.FurnServiceTest" />
       <option name="METHOD_NAME" value="save" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FurnServiceTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.FurnServiceTest" />
+      <option name="METHOD_NAME" value="update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -260,20 +246,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FurnMapperTest.deleteByPrimaryKey" />
-      <item itemvalue="JUnit.FurnMapperTest.updateByPrimaryKey" />
-      <item itemvalue="JUnit.FurnMapperTest.updateByPrimaryKeySelective" />
-      <item itemvalue="JUnit.FurnServiceTest" />
+      <item itemvalue="JUnit.FurnServiceTest.delete" />
+      <item itemvalue="JUnit.FurnServiceTest.findAll" />
+      <item itemvalue="JUnit.FurnServiceTest.findByCondition" />
       <item itemvalue="JUnit.FurnServiceTest.save" />
+      <item itemvalue="JUnit.FurnServiceTest.update" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.97" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FurnServiceTest.findByCondition" />
+        <item itemvalue="JUnit.FurnServiceTest.delete" />
+        <item itemvalue="JUnit.FurnServiceTest.update" />
+        <item itemvalue="JUnit.FurnServiceTest.findAll" />
         <item itemvalue="JUnit.FurnServiceTest.save" />
-        <item itemvalue="JUnit.FurnServiceTest" />
-        <item itemvalue="JUnit.FurnMapperTest.updateByPrimaryKeySelective" />
-        <item itemvalue="JUnit.FurnMapperTest.updateByPrimaryKey" />
-        <item itemvalue="JUnit.FurnMapperTest.deleteByPrimaryKey" />
       </list>
     </recent_temporary>
   </component>
@@ -286,12 +272,24 @@
       <option name="presentableId" value="Default" />
       <updated>1703557063326</updated>
       <workItem from="1703557064393" duration="13423000" />
-      <workItem from="1703570543095" duration="12724000" />
+      <workItem from="1703570543095" duration="31354000" />
     </task>
+    <task id="LOCAL-00001" summary="save接口实现">
+      <created>1703591339876</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703591339876</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="save接口实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="save接口实现" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
